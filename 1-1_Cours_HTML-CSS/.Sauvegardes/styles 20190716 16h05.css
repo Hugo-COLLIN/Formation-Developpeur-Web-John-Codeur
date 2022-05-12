@@ -1,0 +1,46 @@
+p{
+    color:rgba(55,200,0,0.5);
+    font-size: 20px;
+    font-family: helvetica, arial, serif;
+    font-weight:bold;
+    text-align: center
+}
+
+h1{
+    color: blue
+}
+
+/* div div p {
+    font-size: 2em;
+    color:grey;
+    text-align: right
+}
+
+* {
+    border:2px solid black;
+}*/
+
+.special{
+    color:orange;
+}
+
+#unique{
+    font-size:80px;
+}
+
+a:link{
+    color:orange
+}
+
+
+a:visited{
+    color:blueviolet
+}
+
+a:hover{
+    color:yellow
+}
+
+p:first-child{
+    font-size:30px
+}

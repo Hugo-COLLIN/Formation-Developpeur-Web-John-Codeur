@@ -1,0 +1,21 @@
+/*p{
+    display: block;
+    background-color: yellow;
+}
+
+p{
+    display: inline;
+    background-color: yellow;
+}
+
+p{
+    display: inline-block;
+    background-color: yellow;
+    width:200px
+}*/
+
+p{
+    display: none;
+    background-color: yellow;
+    width:200px
+}

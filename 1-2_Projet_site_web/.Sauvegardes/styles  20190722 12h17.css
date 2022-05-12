@@ -1,0 +1,67 @@
+/* GENERAL */
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    font-family: arial, sans-serif;
+}
+
+.wrapper{
+    width:940px;
+    margin: 0 auto;
+    padding: 0 10px
+}
+
+h1{ 
+    font-family: 'Crete Round', serif;
+    font-size:45px;
+    color:#444;
+}
+
+ul{
+    list-style:none
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+}
+
+.orange{
+    color:#ff4a00
+}
+
+
+/* HEADER */
+
+header{
+    height:120px
+}
+
+header h1{
+    float:left;
+    margin-top: 32px;
+}
+
+header nav{
+    float:right;
+    margin-top: 50px;
+}
+
+header nav ul li {
+    float:left;
+    display:inline-block;
+}
+
+header nav ul li a {
+    text-transform:uppercase;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+
+

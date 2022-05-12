@@ -1,0 +1,154 @@
+/* GENERAL */
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    font-family: arial, sans-serif;
+}
+
+.wrapper{
+    width:940px;
+    margin: 0 auto;
+    padding: 0 10px
+}
+
+h1{ 
+    font-family: 'Crete Round', serif;
+    font-size:45px;
+    color:#444;
+}
+
+h2{
+    color:#444;
+    font-size: 55px;
+}
+
+h4{
+    font-size:24px;
+    color:#444;
+    
+}
+
+p{
+    line-height:20px;
+    color:#777;
+}
+
+ul{
+    list-style:none
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+}
+
+.orange{
+    color:#ff4a00
+}
+
+
+/* HEADER */
+
+header{
+    height:120px
+}
+
+header h1{
+    float:left;
+    margin-top: 32px;
+}
+
+header nav{
+    float:right;
+    margin-top: 50px;
+}
+
+header nav ul li {
+    float:left;
+    display:inline-block;
+}
+
+header nav ul li a {
+    text-transform:uppercase;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/*MAIN-IMAGE*/
+
+#main-image{
+    height:580px;
+    background: url(Images/main.jpg) center
+}
+
+#main-image h2{
+    font-weight:normal;
+    text-transform:uppercase;
+    text-align:center;
+    padding: 150px 0 40px 0;
+    margin-bottom: 20px;
+}
+
+.button-1{
+    display:block;
+    width: 120px;
+    height: 50px;
+    background: #ff4a00;
+    color:#fff;
+    font-size:20px;
+    margin:0 auto;
+    line-height: 50px;
+    text-align:center;
+    border-radius:3px;
+}
+
+.button-1:hover{
+    background: #34c7ff;
+}
+
+/* STEPS */
+
+#steps ul{
+    margin: 80px 0;
+}
+
+#steps ul li{
+    width: 300px;
+    /*display:inline-block;*/
+    float:left;
+    margin-right:10px;
+    padding-top: 140px;
+    text-align:center;
+}
+
+#steps h4{
+    text-transform: uppercase;
+    margin-bottom:20px;
+}
+
+#steps p{
+    margin-bottom: 2px;
+}
+
+#step1{
+    background: url(Images/steps-icon-1.png) no-repeat top center;
+}
+
+#step2{
+    background: url(Images/steps-icon-2.png) no-repeat top center;
+}
+
+#step3{
+    background: url(Images/steps-icon-3.png) no-repeat top center;
+}
+
+
+
+
+
+
+
