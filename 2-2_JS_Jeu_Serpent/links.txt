@@ -1,0 +1,1 @@
+https://prograide.com/pregunta/26432/Maintenir-les-proportions-de-div-mais-remplir-la-largeur-et-la-hauteur-de-l39ecran-en-CSS
