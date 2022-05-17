@@ -3,15 +3,18 @@ window.onload = function () {
     //Variables
     let canvas;
     let ctx;
+    let snake;
+
     let xCoord = 0, yCoord = 0;
+    const canWidth = 900, canHeight = 600;
     const delay = 50;
 
     //Functions
     function init()
     {
         canvas = document.createElement('canvas');
-        canvas.width = 900;
-        canvas.height = 600;
+        canvas.width = canWidth;
+        canvas.height = canHeight;
         canvas.style.border = "1px solid";
 
         document.body.appendChild(canvas);
