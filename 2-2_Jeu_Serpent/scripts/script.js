@@ -7,7 +7,33 @@ window.onload = function () {
 
     let xCoord = 0, yCoord = 0;
     const canWidth = 900, canHeight = 600;
+    const blockSize = 30;
     const delay = 50;
+
+    function drawBlock(ctx, elem)
+    {
+        let x = elem[0] * blockSize;
+        let y = elem[1] * blockSize;
+        ctx.fillRect(x, y, blockSize, blockSize);
+    }
+
+    //Constructors
+    function Snake (body)
+    {
+        this.body = body;
+
+        this.draw = function () {
+            ctx.save();
+            ctx.fillStyle = "#f00";
+            //for (const elem in this.body)
+                //drawBlock(ctx, elem);
+                //console.log(elem[0], elem[1]);
+
+            for (let i = 0 ; i < this.body.length ; i ++)
+                drawBlock(ctx, this.body[i]);
+            ctx.restore();
+        }
+    }
 
     //Functions
     function init()
@@ -20,17 +46,14 @@ window.onload = function () {
         document.body.appendChild(canvas);
 
         ctx = canvas.getContext('2d');
+        snake = new Snake([[6,4], [5,4], [4,4]]);
         refreshCan();
     }
 
     function refreshCan()
     {
-        xCoord += 2;
-        yCoord += 2;
-
         ctx.clearRect(0,0, canvas.width, canvas.height);
-        ctx.fillStyle = "#f00";
-        ctx.fillRect(xCoord, yCoord, 100, 50);
+        snake.draw();
         setTimeout(refreshCan, delay);
     }
 
