@@ -6,3 +6,5 @@
             {% endif %}
         {% endfor %}
     </ul>
+
+theme: jekyll-theme-slate
