@@ -1,3 +1,4 @@
+theme: jekyll-theme-slate   
    {% assign doclist = site.pages | sort: 'url'  %}
     <ul>
        {% for doc in doclist %}
@@ -6,5 +7,3 @@
             {% endif %}
         {% endfor %}
     </ul>
-
-theme: jekyll-theme-slate
