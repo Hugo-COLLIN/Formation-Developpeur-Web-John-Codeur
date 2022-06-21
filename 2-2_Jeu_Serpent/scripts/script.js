@@ -11,9 +11,11 @@ window.onload = function () {
     const delay = 100;
 
     //Constructors
-    function Snake (body)
+    function Snake (bodyP, dirP)
     {
-        this.body = body;
+        //Attributes
+        this.body = bodyP;
+        this.direction = dirP;
 
         this.draw = function () {
             ctx.save();
@@ -45,7 +47,7 @@ window.onload = function () {
         document.body.appendChild(canvas);
 
         ctx = canvas.getContext('2d');
-        snake = new Snake([[6,4], [5,4], [4,4]]);
+        snake = new Snake([[6,4], [5,4], [4,4]], "right");
         refreshCan();
     }
 
@@ -65,7 +67,7 @@ window.onload = function () {
         setTimeout(refreshCan, delay);
     }
 
-    //Main
+    //Main prog
     init();
 
 }
