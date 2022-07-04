@@ -16,6 +16,37 @@ body
     font-family: Arial, sans-serif;
 }
 
+/* Fonts */
+@font-face {
+    font-family: 'Limelight';
+    src: url("fonts/Limelight-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url("fonts/Lobster-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1,
+h2
+{
+    font-family: Limelight, cursive;
+}
+
+h3,
+main section:last-child p
+{
+    font-family: Lobster, cursive;
+}
+
+/**
+--- HEADER ---
+ */
+
 header
 {
     padding: 30px 0;
@@ -29,6 +60,8 @@ header h1
     text-transform: uppercase;
     text-shadow: 2px 2px 2px #000;
 }
+
+
 
 /*
 --- MENU ---
