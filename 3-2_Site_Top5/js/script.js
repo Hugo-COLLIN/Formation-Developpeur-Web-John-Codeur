@@ -1,31 +1,46 @@
 $(function () {
-    const SPEED = 250;
+    /*
+    --- VARIABLES ---
+     */
+    const SHORT_TIME = 250,
+          LONG_TIME = 700;
 
     const $menuItems = $("main ul").children("li"), /*Les variables qui commencent par $ contiennent du JQuery, pas obligatoire.*/
           totalMenuItems = $menuItems.length;
-    let   openedIndex = -1;
+    let   openedIndex = 2;
 
+
+    /*
+    --- FUNCTIONS ---
+     */
     const init = function ()
+    {
+        clickOnMenuAction();
+
+        if (validIndex(openedIndex))
+            animateItem($menuItems.eq(openedIndex), true, LONG_TIME);
+    };
+
+    const clickOnMenuAction = function ()
     {
         $menuItems.children(".images").click(function () {
             const newIndex = $(this).parent().index(),
-                  $item = $menuItems.eq(newIndex);
+                $item = $menuItems.eq(newIndex);
 
             if (validIndex(newIndex))
                 if (openedIndex === newIndex)
                 {
-                    animateItem($item, false, SPEED);
+                    animateItem($item, false, SHORT_TIME);
                     openedIndex = -1;
                 }
                 else
                 {
-                    animateItem($menuItems.eq(openedIndex), false, SPEED)
-                    animateItem($item, true, SPEED);
+                    animateItem($menuItems.eq(openedIndex), false, SHORT_TIME)
+                    animateItem($item, true, SHORT_TIME);
                     openedIndex = newIndex;
                 }
-
-        })
-    };
+        });
+    }
 
     const validIndex = function (indexToCheck)
     {
@@ -42,6 +57,10 @@ $(function () {
         $colorImage.animate(colorImageParam, speed);
     }
 
+
+    /*
+    --- MAIN ---
+    */
     init();
 
 });
