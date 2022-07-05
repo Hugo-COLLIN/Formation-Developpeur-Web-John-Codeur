@@ -7,7 +7,7 @@ $(function () {
 
     const $menuItems = $("main ul").children("li"), /*Les variables qui commencent par $ contiennent du JQuery, pas obligatoire.*/
           totalMenuItems = $menuItems.length;
-    let   openedIndex = 2;
+    let   openedIndex = Math.round((totalMenuItems - 1) / 2);
 
 
     /*
