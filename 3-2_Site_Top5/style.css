@@ -76,7 +76,11 @@ main ul
 
 main ul li
 {
-
+    float:left;
+    width:140px;
+    height:500px;
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -84,6 +88,7 @@ main ul li
 .bw,
 .color
 {
+    position:absolute;
     width: 140px;
     height: 500px;
     cursor: pointer;
@@ -92,10 +97,12 @@ main ul li
 {
     background: url("images/bw-image.jpg") no-repeat;
     opacity: 0.7;
+    left:0;
 }
 .color
 {
     background: url("images/color-image.jpg") no-repeat;
+    left:140px;
 }
 
 
@@ -120,8 +127,10 @@ main ul li
     background-position: -560px 0;
 }
 
-main section:last-child
+main section:last-child /*description*/
 {
+    position:absolute;
+    left:140px;
     width: 240px;
     height:460px;
     padding: 20px;
