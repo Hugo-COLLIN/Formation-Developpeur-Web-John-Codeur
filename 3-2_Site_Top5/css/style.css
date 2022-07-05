@@ -12,21 +12,21 @@ li
 
 body
 {
-    background: #bfbfbf url("images/background.jpg") repeat-x;
+    background: #bfbfbf url("../images/background.jpg") repeat-x;
     font-family: Arial, sans-serif;
 }
 
 /* Fonts */
 @font-face {
     font-family: 'Limelight';
-    src: url("fonts/Limelight-Regular.ttf");
+    src: url("../fonts/Limelight-Regular.ttf");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Lobster';
-    src: url("fonts/Lobster-Regular.ttf");
+    src: url("../fonts/Lobster-Regular.ttf");
     font-style: normal;
     font-weight: normal;
 }
@@ -95,13 +95,13 @@ main ul li
 }
 .bw
 {
-    background: url("images/bw-image.jpg") no-repeat;
+    background: url("../images/bw-image.jpg") no-repeat;
     opacity: 0.7;
     left:0;
 }
 .color
 {
-    background: url("images/color-image.jpg") no-repeat;
+    background: url("../images/color-image.jpg") no-repeat;
     left:140px;
 }
 
