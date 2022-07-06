@@ -40,6 +40,17 @@ $(function () {
                     openedIndex = newIndex;
                 }
         });
+
+        $(".btn").hover(
+            function ()
+            {
+                $(this).addClass("hovered");
+            },
+            function ()
+            {
+                $(this).removeClass("hovered");
+            }
+        );
     }
 
     const validIndex = function (indexToCheck)
