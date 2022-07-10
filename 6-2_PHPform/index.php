@@ -28,6 +28,7 @@
             $phoneErr = "Un numéro de téléphone pas très valide que nous avons là...";
 
         if (($fnameErr || $lnameErr || $emailErr || $phoneErr || $msgErr) == "") //$fnameErr== "" and $lnameErr== "" and $emailErr== "" and $phoneErr== "" and $msgErr== ""
+	{
             $isSuccess = true;
 
             $emailText = "Firstname : $fname\nLastname : $lname\nEmail: $email\nPhone : $phone\nMessage :\n$msg";
@@ -35,6 +36,7 @@
             mail($emailTo, "Message du formulaire de contact", $emailText, $headers);
 
             $fname = $lname = $email = $phone = $msg = "";
+	}
     }
 
     function isPhone ($number)
