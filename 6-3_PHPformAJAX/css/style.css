@@ -1,0 +1,142 @@
+/*
+--- FONTS ---
+ */
+
+@font-face {
+    font-family: "lato";
+    src: url("../fonts/lato-regular-webfont.woff2") format("woff2"),
+    url("../fonts/lato-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "bootstrap-icons";
+    src: url("../fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3") format("woff2"),
+    url("../fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+--- GLOBAL ---
+ */
+
+* {
+    margin:0;
+    padding:0;
+}
+
+main hr,
+.btnSubmit
+{
+    background-color: #ffa500;
+}
+
+h2,
+.btnSubmit
+{
+    text-transform: uppercase;
+    font-weight:bold;
+    color: #fff;
+}
+
+body {
+    font-family: "lato", sans-serif !important;
+    margin: 70px 0 !important;
+    background-color: #0069d6 !important;
+}
+
+main hr {
+    width: 100px;
+    height:2px !important;
+    opacity: 1;
+
+    margin:0 auto;
+}
+
+section>header {
+    text-align: center;
+    margin-bottom:3rem;
+    margin-top: 1em;
+}
+
+article>.col-lg-10 {
+    margin: 0 auto;
+}
+
+
+#contact-form {
+    font-size: 1.2em;
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 0.5em;
+}
+
+.needed {
+    color:#0069d6;
+    font-weight: bold;
+}
+
+.form-control {
+    height: 3.3em;
+    font-size:1.2em;
+}
+
+.comments
+{
+    font-style: italic;
+    font-size:0.8em;
+    color:#d82c2e;
+    height:1.6em;
+}
+
+form textarea {
+    height: 8em!important;
+}
+
+/*
+#contact-form input[type="submit"]
+{
+
+}
+*/
+
+.btnSubmit {
+    margin: 1.5rem auto 0;
+    display: block;
+
+    border:1px solid #ddd;
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 5px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.btnSubmit:hover {
+    background-color: #333;
+    border-color: #ffa500;
+}
+
+.thanks
+{
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+}
