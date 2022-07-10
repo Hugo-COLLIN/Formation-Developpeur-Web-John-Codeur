@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contactez-moi !</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- JQUERY -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- PERSO -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <main>
+        <section class="container">
+            <hr>
+            <header>
+                <h2>Contactez-moi</h2>
+            </header>
+            <article class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <form id="contact-form" method="post" action="" role="form">
+                        <div class="row">
+                            <section class="col-md-6">
+                                <label for="firstName">Prénom <span class="needed">*</span></label>
+                                <input id="firstName" type="text" name="firstname" class="form-control" placeholder="Votre prénom" value="">
+                                <p class="comments"></p>
+                            </section>
+
+                            <section class="col-md-6">
+                                <label for="lastName">Nom <span class="needed">*</span></label>
+                                <input id="lastName" type="text" name="lastname" class="form-control" placeholder="Votre nom" value="">
+                                <p class="comments"></p>
+                            </section>
+
+                            <section class="col-md-6">
+                                <label for="email">Email <span class="needed">*</span></label>
+                                <input id="email" type="email" name="email" class="form-control" placeholder="Votre email" value="">
+                                <p class="comments"></p>
+                            </section>
+
+                            <section class="col-md-6">
+                                <label for="tel">Téléphone</label>
+                                <input id="tel" type="tel" name="telephone" class="form-control" placeholder="Votre numéro de téléphone" value="">
+                                <p class="comments"></p>
+                            </section>
+
+                            <section class="col-md-12">
+                                <label for="msg">Message <span class="needed">*</span></label>
+                                <textarea id="msg" type="text" name="message" class="form-control" placeholder="Votre message" rows="4"></textarea>
+                                <p class="comments"></p>
+                            </section>
+
+                            <section class="col-md-12">
+                                <p class="needed">* Pas le choix : il faut remplir ces informations !</p> <!--Pas le choix : remplis ces informations si tu veux survivre-->
+                            </section>
+
+                            <section class="col-md-12">
+                                <input type="submit" class="btnSubmit" value="Envoyer">
+                            </section>
+                        </div>
+
+                    </form>
+                </div>
+            </article>
+
+
+        </section>
+    </main>
+</body>
+</html>
