@@ -12,10 +12,11 @@ $(function () {
             dataType: 'json',
             success: function (result) {
 
-                $("#contact-form > p").remove();
                 if (result.isSuccess)
                 {
-                    $form.append("<p class='thanks'>Le message a été correctement envoyé ! Merci de m'avoir contacté !</p>");
+                    $("#contact-form *:first-child").css({display: "none"});
+                    $form.append("<p class='thanks'>Le message a été correctement envoyé ! Merci de m'avoir contacté !</p>" +
+                        "<button class='btnSubmit' id='btnAgain'>Me contacter à nouveau (ça va faire beaucoup :) )</button>");
                     $form[0].reset();
                 }
                 else
@@ -29,6 +30,12 @@ $(function () {
                 }
 
             }
-        })
+        });
+    });
+
+    $("#btnAgain").click(function () {
+        $("#contact-form p").remove();
+        $("#contact-form button").remove();
+        $("#contact-form *:first-child").css({display: "block"});
     })
 });
