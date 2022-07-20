@@ -1,42 +1,56 @@
 <?php
-    $fname = $lname = $email = $phone = $msg = "";
-    $fnameErr = $lnameErr = $emailErr = $phoneErr = $msgErr = "";
-    $isSuccess = false;
+/*
+    $labelsInfos = array("fname", "lname", "email", "phone", "msg");
+
+    $infos = array();
+    foreach ($labelsInfos as $label)
+    {
+        $infos[] = $label => "";
+        echo $infos;
+    }
+*/
+
+    $sent = array("fname" => "", "lname" => "", "email" => "", "phone" => "", "msg" => "",
+        "fnameErr" => "", "lnameErr" => "", "emailErr" => "", "phoneErr" => "", "msgErr" => "",
+        "isSuccess" => false);
+
     $emailTo = "h.collin1@outlook.fr";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        $fname = verifyInput($_POST["firstname"]);
-        $lname = verifyInput($_POST["lastname"]);
-        $email = verifyInput($_POST["email"]);
-        $phone = verifyInput($_POST["telephone"]);
-        $msg = verifyInput($_POST["message"]);
+        $sent["fname"] = verifyInput($_POST["firstname"]);
+        $sent["lname"] = verifyInput($_POST["lastname"]);
+        $sent["email"] = verifyInput($_POST["email"]);
+        $sent["phone"] = verifyInput($_POST["telephone"]);
+        $sent["msg"] = verifyInput($_POST["message"]);
 
-        if (empty($fname))
-            $fnameErr = "J'aimerais connaître ton prénom, c'est pour les statistiques :)";
-        if (empty($lname))
-            $lnameErr = "Allez, donne-moi ton petit nom...";
-        if (empty($msg))
-            $msgErr = "Hey ! Au moins un petit bonjour pour la route !";
+        if (empty($sent["fname"]))
+            $sent["fnameErr"] = "J'aimerais connaître ton prénom, c'est pour les statistiques :)";
+        if (empty($sent["lname"]))
+            $sent["lnameErr"] = "Allez, donne-moi ton petit nom...";
+        if (empty($sent["msg"]))
+            $sent["msgErr"] = "Hey ! Au moins un petit bonjour pour la route !";
 
-        if (empty($email))
-            $emailErr = "Tu veux être recontacté, pas vrai ;)";
-        else if (!isEmail($email))
-            $emailErr = "Tu n'essaierais pas de m'arnaquer là ?";
+        if (empty($sent["email"]))
+            $sent["emailErr"] = "Tu veux être recontacté, pas vrai ;)";
+        else if (!isEmail($sent["email"]))
+            $sent["emailErr"] = "Tu n'essaierais pas de m'arnaquer là ?";
 
-        if (!isPhone($phone))
-            $phoneErr = "Un numéro de téléphone pas très valide que nous avons là...";
+        if (!isPhone($sent["phone"]))
+            $sent["phoneErr"] = "Un numéro de téléphone pas très valide que nous avons là...";
 
-        if (($fnameErr || $lnameErr || $emailErr || $phoneErr || $msgErr) == "") //$fnameErr== "" and $lnameErr== "" and $emailErr== "" and $phoneErr== "" and $msgErr== ""
+        if (($sent["fnameErr"] || $sent["lnameErr"] || $sent["emailErr"] || $sent["phoneErr"] || $sent["msgErr"]) == "") //$fnameErr== "" and $lnameErr== "" and $emailErr== "" and $phoneErr== "" and $msgErr== ""
         {
-            $isSuccess = true;
+            $sent["isSuccess"] = true;
 
-            $emailText = "Firstname : $fname\nLastname : $lname\nEmail: $email\nPhone : $phone\nMessage :\n$msg";
-            $headers = "From: $fname $lname <$email>\r\nReply-To: $email";
+            $emailText = "Firstname : {$sent["fname"]}\nLastname : {$sent["lname"]}\nEmail: {$sent["email"]}\nPhone : {$sent["phone"]}\nMessage :\n{$sent["msg"]}";
+            $headers = "From: {$sent["fname"]} {$sent["lname"]} <{$sent["email"]}>\r\nReply-To: {$sent["email"]}";
             mail($emailTo, "Message du formulaire de contact", $emailText, $headers);
 
-            $fname = $lname = $email = $phone = $msg = "";
+            //for ($i = 0 ; $i < 5 ; $i ++) $sent[$i] = "";
         }
+
+        echo json_encode($sent);
     }
 
     function isPhone ($number)
